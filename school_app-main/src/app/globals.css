@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+.embla {
+  overflow: hidden;
+ 
+    
+  
+}
+.embla2{
+  --slide-spacing: 1rem;
+    --slide-size: 47%;
+    --slide-height: 19rem;
+    
+}
+.embla__container {
+  display: flex;
+}
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container2 {
+  backface-visibility: hidden;
+  display: flex;
+  touch-action: pan-y;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 100vw;
+}
+
+.embla__slide2 {
+  flex: 0 0 50%;
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+  position: relative;
+}
+@media (max-width: 1080px) {
+  .embla__slide2 {
+    flex: 0 0 99%;
+  }
+}
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee {
+  white-space: nowrap;
+  animation-timing-function: linear;
+}
+
+@font-face {
+  font-family: 'SolaimanLipiNormal';
+  src: url('https://www.fontsaddict.com/fontface/solaimanlipinormal.ttf');
+}
+/* body{
+  font-family: 'SolaimanLipiNormal', sans-serif !important;
+} */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
